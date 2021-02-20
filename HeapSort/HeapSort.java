@@ -6,7 +6,7 @@ public class HeapSort{
 		
 		//First heapify the array
 		//Take the right most children and compare it with its parent and keep doing that
-		//Here started from n/2 because we heapify from lowest subtree and parent of lowest subtree is at n/2
+		//Here started from n/2 because we heapify from right most lowest subtree and parent of right most lowest subtree is at n/2
 		int n = arr.length;
 		for(int i = n/2-1; i>=0; i--){
 			heapify(arr, n-1, i);
