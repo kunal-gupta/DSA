@@ -19,6 +19,7 @@ public class HeapSort{
 			arr[0] = swap;
 			
 			//heapify again ignoring the last element
+			//Always push smallest element from top place to last place in order to pull the biggest element at 0.
 			heapify(arr, i-1, 0);
 		}
 		
@@ -29,6 +30,7 @@ public class HeapSort{
 	/**
 	i: total element in the array
 	n: Parent node where max value is supposed to appear
+	Here heapify works from top to bottom, so this will make sure that parent will always have the biggest one
 	*/
 	private void heapify(int arr[], int i, int n){
 		int leftChild = 2*n+1;
